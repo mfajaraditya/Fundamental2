@@ -1,0 +1,30 @@
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f0d290;
+}
+
+#search,
+input {
+  width: 80%;
+  border-radius: 7px;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+#searchButton {
+  width: 130px;
+  border-radius: 7px;
+  background-color: #2a3a4a;
+  color: white;
+  height: 50px;
+  font-size: 19px;
+}
+
+::placeholder {
+  color: black;
+}
