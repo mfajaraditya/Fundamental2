@@ -1,5 +1,5 @@
 #makanan {
-    margin-top: 32px;
+    margin-top: 30px;
     width: 100%;
     padding: 16px;
 }
@@ -17,22 +17,31 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    padding: 0 0 5px 0;
+    padding: 10px;
+    background-color: white;
 }
 
 .makanan .sampul {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;
+    display: flex;
+    width: 70%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 13px;
+}
+
+.deskripsi {
+    padding: 10px;
+    text-align: justify;
 }
 
 .deskripsi > h2 {
     font-weight: lighter;
+    padding: 10px;
 }
 
 .deskripsi > p {
-    margin-top: 10px;
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

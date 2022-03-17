@@ -1,16 +1,18 @@
-function DataSource(onSuccess, onFailed) {
+class DataSource {
+  constructor(onSuccess, onFailed) {
     this.onSuccess = onSuccess;
     this.onFailed = onFailed;
-}
+  }
 
-DataSource.prototype.cariMakan = function (keyword) {
-    var filterMakan = makanan.filter(function (makan) {
-        return makan.name.toUpperCase().includes(keyword.toUpperCase());
-    });
+  cariMakan(keyword) {
+    const filterMakan = makanan.filter((makan) =>
+      makan.name.toUpperCase().includes(keyword.toUpperCase())
+    );
 
-    if(filterMakan.length) {
-        this.onSuccess(filterMakan);
+    if (filterMakan.length) {
+      this.onSuccess(filterMakan);
     } else {
-        this.onFailed(keyword + "is not found");
+      this.onFailed(`${keyword} is not found`);
     }
+  }
 }

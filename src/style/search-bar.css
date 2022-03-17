@@ -3,17 +3,28 @@
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
   background-color: #f0d290;
+}
+
+#label-search {
+  font-size: 25px;
 }
 
 #search,
 input {
-  width: 80%;
+  width: 100%;
   border-radius: 7px;
   text-align: center;
   margin-bottom: 10px;
   height: 50px;
+  font-size: 23px;
+}
+
+input::placeholder {
+  font-family: "Fredoka", sans-serif;
+  font-size: large;
+  color: grey;
 }
 
 #searchButton {
@@ -22,7 +33,8 @@ input {
   background-color: #2a3a4a;
   color: white;
   height: 50px;
-  font-size: 19px;
+  font-size: 23px;
+  margin-top: 14px;
 }
 
 ::placeholder {
