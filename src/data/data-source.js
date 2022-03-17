@@ -1,18 +1,17 @@
+import makanan from './makanan.js';
 class DataSource {
-  constructor(onSuccess, onFailed) {
-    this.onSuccess = onSuccess;
-    this.onFailed = onFailed;
-  }
-
-  cariMakan(keyword) {
-    const filterMakan = makanan.filter((makan) =>
-      makan.name.toUpperCase().includes(keyword.toUpperCase())
-    );
-
-    if (filterMakan.length) {
-      this.onSuccess(filterMakan);
-    } else {
-      this.onFailed(`${keyword} is not found`);
-    }
+  static cariMakan(keyword) {
+    return new Promise((resolve, reject) => {
+      const filterMakan = makanan.filter(makan =>
+        makan.name.toUpperCase().includes(keyword.toUpperCase())
+      );
+      if (filterMakan.length) {
+        resolve(filterMakan);
+      } else {
+        reject(`${keyword} is not found`);
+      }
+    });
   }
 }
+
+export default DataSource;

@@ -1,11 +1,14 @@
+import DataSource from '../data/data-source.js';
+
 const main = () => {
     const search = document.querySelector("#search");
     const searchButton = document.querySelector("#searchButton");
     const makananElement = document.querySelector("#makanan");
 
-    const onButtonSearchClicked = () =>  {
-        const dataSource = new DataSource(renderResult, fallbackResult);
-        dataSource.cariMakan(search.value);
+    const onButtonSearchClicked =  () =>  {
+        DataSource.cariMakan(search.value)
+        .then(renderResult)
+        .catch(fallbackResult)
     };
 
     const renderResult = results => {
@@ -33,3 +36,5 @@ const main = () => {
 
     searchButton.addEventListener("click", onButtonSearchClicked);
 }
+
+export default main;
