@@ -1,8 +1,8 @@
+import '../component/search-bar.js';
 import DataSource from '../data/data-source.js';
 
 const main = () => {
-    const search = document.querySelector("#search");
-    const searchButton = document.querySelector("#searchButton");
+    const search = document.querySelector("search-bar");
     const makananElement = document.querySelector("#makanan");
 
     const onButtonSearchClicked =  () =>  {
@@ -34,7 +34,7 @@ const main = () => {
         makananElement.innerHTML += '<h2 class="placeholder">${message}</h2>'
     };
 
-    searchButton.addEventListener("click", onButtonSearchClicked);
+   search.clickEvent = onButtonSearchClicked;
 }
 
 export default main;
