@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+.banner-bar{
+    display: flex;
+    font-family: 'Playfair Display', serif;
+    background-color: #781d42;
+    color: gold;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

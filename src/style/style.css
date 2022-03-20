@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
-@import "listmakan.css";
 @import "search-bar.css";
+@import "banner-bar.css";
+@import "footer-bar.css";
 
 html {
   scroll-behavior: smooth;
@@ -10,71 +11,14 @@ html {
 }
 
 body {
-  background-color: #ffefd8;
+  background-color: #f0d290;
   font-family: "Fredoka", sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-  background-size: cover;
-}
-
 main {
   width: 80%;
   margin: 32px auto;
 }
-
-.header {
-  display: flex;
-  background-color: #ffefd8;
-  color: black;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px;
-}
-
-h1 {
-  font-weight: 120px;
-}
-h3 {
-  padding: 7px;
-}
-
-.container-nav ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.navbar li,
-a {
-  display: flex;
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  font-size: 17px;
-  font-weight: bolder;
-  color: gold;
-}
-
-.footer {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  color: white;
-  background-color: #781d42;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
-

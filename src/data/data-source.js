@@ -1,17 +1,17 @@
-import makanan from './makanan.js';
 class DataSource {
-  static cariMakan(keyword) {
-    return new Promise((resolve, reject) => {
-      const filterMakan = makanan.filter(makan =>
-        makan.name.toUpperCase().includes(keyword.toUpperCase())
-      );
-      if (filterMakan.length) {
-        resolve(filterMakan);
-      } else {
-        reject(`${keyword} is not found`);
-      }
-    });
+  static cariMakan (keyword) {
+    return fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((responseJson) => {
+        if (responseJson.meals) {
+          return Promise.resolve(responseJson.meals)
+        } else {
+          return Promise.reject(`${keyword} is not found!`)
+        }
+      })
   }
 }
 
-export default DataSource;
+export default DataSource
